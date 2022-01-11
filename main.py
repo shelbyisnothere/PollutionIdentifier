@@ -22,6 +22,7 @@ def main():
         return
     
     # Get JSON lattitude and longitude
+    # TO DO: Improve input for city/zip-code by adding more validation and more specific input
     if(mode == 1):
         city = input("Please enter your city name: ")
         geocode_url = "http://api.openweathermap.org/geo/1.0/direct?q=" + city + "&appid=" + api_keys.open_weather_api_key
@@ -38,6 +39,7 @@ def main():
         print(json)
 
     # Get pollution data
+    # TO DO: Format pollution data output
     pollution_url = ("http://api.openweathermap.org/data/2.5/air_pollution?lat=" + lattitude
                         + "&lon=" + longitude 
                         + "&appid=" + api_keys.open_weather_api_key)
